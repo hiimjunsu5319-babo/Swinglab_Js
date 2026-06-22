@@ -1,0 +1,20 @@
+﻿GitHub upload checklist: file first lines must match exactly.
+
+app.py => import datetime as dt
+analytics.py => import datetime as dt
+capture_alpha.py => import base64
+collector.py => import datetime as dt
+cron_refresh.py => import db
+db.py => import json
+stock_analyzer.py => # -*- coding: utf-8 -*-
+stock_screener.py => # -*- coding: utf-8 -*-
+README.md => # PyKRX Swing Lab
+requirements.txt => pykrx==1.2.8
+render.yaml => services:
+service/naver_candidate_service.py => # -*- coding: utf-8 -*-
+service/naver_scraper.py => # -*- coding: utf-8 -*-
+service/naver_top10_service.py => # -*- coding: utf-8 -*-
+service/stock_search.py => # -*- coding: utf-8 -*-
+static/index.html => <!doctype html>
+static/app.js => const root = document.getElementById("root");
+static/styles.css => :root {

@@ -1,8 +1,14 @@
-import db
-from app import generate_reports
-
-
-if __name__ == "__main__":
-    db.init_db()
-    reports = generate_reports()
-    print(f"Generated {len(reports)} reports")
+services:
+  - type: web
+    name: junsu-swinglab
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: APP_ENV
+        value: main
+      - key: NAVER_CAPTURE_DIR
+        value: static/naver_captures
