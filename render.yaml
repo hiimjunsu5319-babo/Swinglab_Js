@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: junsu-swinglab
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: APP_ENV
+        value: main
+      - key: NAVER_CAPTURE_DIR
+        value: static/naver_captures
